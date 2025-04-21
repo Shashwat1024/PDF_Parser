@@ -26,7 +26,7 @@ if not transactions:
     print("No transactions found. Check the text format:")
     print(cleaned_text[:1000])
 else:
-    df = pd.DataFrame(transactions, columns=["Date", "Description", "Amount", "Type"])
+    df = pd.DataFrame(transactions, columns=["Date", "Description", "Amount", "Debit/Credit"])
 
     # Clean description further
     df['Description'] = df['Description'].str.replace(r'\s+', ' ', regex=True).str.strip()
